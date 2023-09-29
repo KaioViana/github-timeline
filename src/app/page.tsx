@@ -27,11 +27,11 @@ export default function Home() {
       <main className="flex flex-col items-center justify-between">
         <div className='h-[230px] w-full border-b border-b-slate-500 bg-transparent bg-clip-padding blur-backdrop-filter'>
           <SearchBar
-            props={{}}
             getSearch={(owner) => setOwner(owner)}
           />
         </div>
         <div className='pb-6 pt-6'>
+          <div className='flex flex-row w-full justify-center pb-4'><span className='text-white lg:text-3xl font-bold '>{`${owner} repositories`}</span></div>
           <Timeline
             props={repos.map((repo: any) => ({
               repoName: repo.name,

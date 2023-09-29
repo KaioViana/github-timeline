@@ -3,13 +3,11 @@ import Image from 'next/image';
 import searchIcon from '../../../../public/search.svg';
 
 interface SearchBarProps {
-  props: {
-  },
   getSearch: (search: string) => void;
 }
 
-export default function SearchBar({ props, getSearch }: SearchBarProps) {
-  const [value, setValue] = useState<string>('Google')
+export default function SearchBar({ getSearch }: SearchBarProps) {
+  const [value, setValue] = useState<string>('')
 
   function handleSubmit(e: React.FormEvent<HTMLElement>) {
     e.preventDefault();
